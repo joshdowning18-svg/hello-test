@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Neuroscience Fact</title>
+<style>
+  :root {
+    --bg: #0f1220;
+    --card-bg: #1b1f36;
+    --accent: #7dd3fc;
+    --text: #e8e9f3;
+    --muted: #9aa0c3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #1a1e35, var(--bg));
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    padding: 24px;
+  }
+  .card {
+    max-width: 640px;
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    text-align: center;
+  }
+  .label {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  #fact {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 0 0 28px;
+  }
+  button {
+    background: var(--accent);
+    color: #0f1220;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+  button:hover { transform: scale(1.05); }
+  .footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="label">🧠 Neuroscience Fact</div>
+    <p id="fact">Loading...</p>
+    <button onclick="location.reload()">New Fact (Refresh)</button>
+    <div class="footer">A new fact appears every time you refresh the page.</div>
+  </div>
+
+<script>
+  const facts = [
+    "The human brain contains around 86 billion neurons.",
+    "Your brain uses about 20% of your body's total energy, despite being only ~2% of your body weight.",
+    "The brain has no pain receptors, which is why brain surgery can be performed while a patient is awake.",
+    "Neurons can transmit signals at speeds of up to 268 miles per hour.",
+    "The human brain is about 73% water.",
+    "There are more connections in your brain than there are stars in the Milky Way galaxy.",
+    "Your brain generates about 12-25 watts of electricity, enough to power a low-wattage LED light.",
+    "Short-term memory can hold about 7 items (plus or minus 2) at a time.",
+    "The cerebellum, though only about 10% of the brain's volume, contains over 50% of its neurons.",
+    "Memories are not stored in one place; they're distributed across networks throughout the brain.",
+    "The brain itself cannot feel pain, but it interprets pain signals from the rest of the body.",
+    "Information in the brain travels at different speeds depending on the type of nerve fiber, ranging from about 1 to 120 meters per second.",
+    "The brain continues to develop and change through a process called neuroplasticity, well into adulthood.",
+    "A newborn baby's brain grows almost triple in size during the first year of life.",
+    "Dreaming occurs primarily during REM (rapid eye movement) sleep, when brain activity resembles that of being awake.",
+    "The left and right hemispheres of the brain communicate through a bundle of about 200-300 million nerve fibers called the corpus callosum.",
+    "The hippocampus, key to forming new memories, is one of the few brain regions where new neurons can be generated in adulthood.",
+    "Multitasking is largely a myth; the brain actually switches rapidly between tasks rather than doing them simultaneously.",
+    "The brain's wrinkles (gyri and sulci) increase its surface area, allowing more neurons to fit inside the skull.",
+    "Synesthesia is a neurological condition where stimulation of one sense triggers an experience in another, such as 'seeing' sounds as colors.",
+    "The olfactory bulb, responsible for smell, has a direct connection to the brain's memory and emotion centers, which is why smells can trigger vivid memories.",
+    "Chronic stress can shrink the prefrontal cortex, the brain region responsible for decision-making and self-control.",
+    "The brain can't multitask on complex conscious tasks, but it can multitask on automatic, unconscious functions like breathing and walking.",
+    "Phantom limb sensations occur because the brain's map of the body doesn't immediately update after amputation.",
+    "The blood-brain barrier is a protective layer of cells that keeps harmful substances in the bloodstream from reaching brain tissue.",
+    "Laughter activates multiple regions of the brain, including areas involved in emotion, movement, and reward.",
+    "The brain reaches about 90% of its adult size by age 6, even though full maturation continues into a person's mid-20s."
+  ];
+
+  document.getElementById('fact').textContent = facts[Math.floor(Math.random() * facts.length)];
+</script>
+</body>
+</html>
